@@ -18,15 +18,15 @@ Cada funcionalidade foi modelada utilizando princípios de abstração, encapsul
 
 # 🧠 Conceitos de POO Utilizados
 
-Interfaces
+- Interfaces
 
-Implementação de métodos
+- Implementação de métodos
 
-Separação de responsabilidades
+- Separação de responsabilidades
 
-Modelagem de objetos
+- Modelagem de objetos
 
-Organização modular de classes
+- Organização modular de classes
 
 O objetivo principal não é replicar um smartphone real, mas treinar a estruturação de código orientado a objetos em Java.
 
@@ -35,31 +35,31 @@ O objetivo principal não é replicar um smartphone real, mas treinar a estrutur
 
 Permite simular funções básicas de um player de música:
 
-Tocar música
+- Tocar música
 
-Pausar música
+- Pausar música
 
-Selecionar música
+- Selecionar música
 
 ## 📞 Aparelho Telefônico
 
 Simula funções básicas de um telefone:
 
-Fazer ligação
+- Fazer ligação
 
-Atender ligação
+- Atender ligação
 
-Iniciar correio de voz
+- Iniciar correio de voz
 
 ## 🌐 Navegador de Internet
 
 Simula um navegador simples:
 
-Exibir página
+- Exibir página
 
-Adicionar nova aba
+- Adicionar nova aba
 
-Atualizar página
+- Atualizar página
 
 # 🏗️ Estrutura do Projeto (Exemplo)
 ```
