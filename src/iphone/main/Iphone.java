@@ -1,85 +1,56 @@
 package iphone.main;
 
-import iphone.features.*;
+import java.util.Scanner;
 
+import iphone.features.MusicPlayer;
+import iphone.features.Telephone;
+import iphone.features.WebBrowser;
 
-public class Iphone implements ReprodutorMusical, AparelhoTelefonico, NavegadorDeInternet{
+public class Iphone {
 
-	private String[] musicas = {"Cliffs of Dover - Eric Johnson", "Holding On - Dragonforce", "Phoenix - Stratovarius"};
-	private String musicaEscolhida;
+	private boolean IphoneIsOn = true;
 	
-	public String[] getMusicas() {
-		return musicas;
-	}
-
-	public void setMusicas(String[] musicas) {
-		this.musicas = musicas;
+	MusicPlayer musicPlayer = new MusicPlayer();
+	Telephone telephone = new Telephone();
+	WebBrowser webBrowser = new WebBrowser();
+	
+	public MusicPlayer getMusicPlayer() {
+		return musicPlayer;
 	}
 	
 	
-	// ------------------------------------------------------------------------------------------------//
-	// Métodos implementados da Interface NavegadorDeInternet
-	// ------------------------------------------------------------------------------------------------//
-
-	@Override
-	public String exibirPagina(String url) {
-		// TODO Auto-generated method stub
-		return null;
+	public Telephone getTelephone() {
+		return telephone;
 	}
 
-	@Override
-	public void adicionarNovaAba() {
-		// TODO
+
+	public WebBrowser getWebBrowser() {
+		return webBrowser;
 	}
 
-	@Override
-	public void atualizarPagina() {
-		// TODO Auto-generated method stub
+	public boolean isOn() {
+		return IphoneIsOn;
+	}
+	
+	public void turnOff() {
+		IphoneIsOn = false;
+	}
+	
+	public int showMenu(Scanner sc) {
+		System.out.println("\n====Tela Inicial====");
+		System.out.println("\n====Aplicativos====");
+		System.out.println("\n1. Player de Música");
+		System.out.println("2. Telefone");
+		System.out.println("3. Navegador de Internet");
+		System.out.println("4. Desligar o Iphone");
+		System.out.print("Escolha um Aplicativo: ");
 		
+		return sc.nextInt();
 	}
 	
-	// ------------------------------------------------------------------------------------------------//
-	//Métodos implementados da Interface AparelhoTelefonico
-	// ------------------------------------------------------------------------------------------------//
-	
-	@Override
-	public String ligar(String numero) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void atender() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void iniciarCorreioVoz() {
-		// TODO Auto-generated method stub
-		
+	public void openMusicPlayer(Scanner sc) {
+		musicPlayer.start(sc);
 	}
 	
-	// ------------------------------------------------------------------------------------------------//
-	//Métodos implementados da Interface ReprodutorMusical
-	// ------------------------------------------------------------------------------------------------//
 	
-	@Override
-	public void tocar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void pausar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public String selecionarMusica(int musica) {
-			musicaEscolhida = musicas[musica - 1];
-		return musicaEscolhida;
-	}
-
 }
