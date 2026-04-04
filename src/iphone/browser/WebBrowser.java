@@ -1,6 +1,11 @@
-package iphone.features;
+package iphone.browser;
 
 public class WebBrowser {
+	
+	public void start() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	public String displayPage(String url) {
 		// TODO Auto-generated method stub
@@ -15,4 +20,5 @@ public class WebBrowser {
 		// TODO Auto-generated method stub
 		
 	}
+
 }

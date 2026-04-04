@@ -1,10 +1,10 @@
-package iphone.main;
+package iphone.core;
 
 import java.util.Scanner;
 
-import iphone.features.MusicPlayer;
-import iphone.features.Telephone;
-import iphone.features.WebBrowser;
+import iphone.browser.WebBrowser;
+import iphone.music.MusicPlayer;
+import iphone.telephone.Telephone;
 
 public class Iphone {
 
@@ -14,20 +14,18 @@ public class Iphone {
 	Telephone telephone = new Telephone();
 	WebBrowser webBrowser = new WebBrowser();
 	
-	public MusicPlayer getMusicPlayer() {
-		return musicPlayer;
+	public void openMusicPlayer(Scanner sc) {
+		musicPlayer.start(sc);
 	}
 	
+	public void openTelephone(Scanner sc) {
+		telephone.start(sc);
+	}
 	
-	public Telephone getTelephone() {
-		return telephone;
+	public void openWebBrowser(Scanner sc) {
+		webBrowser.start();
 	}
-
-
-	public WebBrowser getWebBrowser() {
-		return webBrowser;
-	}
-
+	
 	public boolean isOn() {
 		return IphoneIsOn;
 	}
@@ -43,14 +41,15 @@ public class Iphone {
 		System.out.println("2. Telefone");
 		System.out.println("3. Navegador de Internet");
 		System.out.println("4. Desligar o Iphone");
-		System.out.print("Escolha um Aplicativo: ");
+		System.out.print("\nEscolha um Aplicativo: ");
+		
+		while (!sc.hasNextInt()) {
+	        System.out.println("\nEntrada inválida! Digite um número.");
+	        sc.next();
+	        System.out.print("\nEscolha um Aplicativo: ");
+	    }
 		
 		return sc.nextInt();
 	}
-	
-	public void openMusicPlayer(Scanner sc) {
-		musicPlayer.start(sc);
-	}
-	
 	
 }

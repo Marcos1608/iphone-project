@@ -1,6 +1,8 @@
-package iphone.main;
+package iphone.app;
 
 import java.util.Scanner;
+
+import iphone.core.Iphone;
 
 public class Main {
 	
@@ -23,22 +25,18 @@ public class Main {
 					break;
 					
 				case 2:
-					//TODO
+					iphone.openTelephone(sc);
 					break;
 				
 				case 3:
-					//TODO
+					iphone.openWebBrowser(sc);
 					break;
 				
 				case 4:
 					iphone.turnOff();
 					break;
 					
-				default:
-					System.out.println("\nAplicativo Inexistente!");
-					continue;
 			}
-			
 		}
 	}
 
